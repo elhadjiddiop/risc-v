@@ -21,7 +21,7 @@ architecture A of fetch is
 		seq : process (clk, reset,req_i,hit_in)
 			begin
 				if (reset = '1') then
-					out_adress <= "00000000000000000000000000000000"; -- on reinitialise le program counter
+					out_adress <= "00000000000000000000000000000010"; -- on reinitialise le program counter
 					out_inst <= "00000000000000000000000000000000";
 
 				elsif (clk'event and clk = '1' and hit_in = '1' and req_i='1' ) then
